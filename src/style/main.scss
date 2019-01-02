@@ -1,7 +1,7 @@
 @import "~bootstrap/scss/bootstrap";
 @import "partials/variables";
 @import "partials/mixins";
-@import url('https://fonts.googleapis.com/css?family=Montserrat:400,500,600|Poppins:200,300,400');
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,500,600|Poppins|Raleway:400,600');
 * {
     font-family: $textFont;
     font-weight: 200;
@@ -40,6 +40,9 @@
     .banner {
         min-height: 900px;
         width: 100%;
+        @media (max-width: 767.98px) {
+            margin-bottom: 30px;
+        }
         .container {
             min-height: 900px;
         }
@@ -47,6 +50,9 @@
             min-height: 900px;
         }
         &__left {
+            @media (max-width: 767.98px) {
+                text-align: center;
+            }
             img {
                 width: auto;
                 height: auto;
@@ -54,6 +60,10 @@
             }
         }
         &__right {
+            @media (max-width: 767.98px) {
+                text-align: center !important;
+                padding: 0 20px;
+            }
             h1 {
                 font-family: $headingFont;
                 color: $whiteColor;
@@ -65,6 +75,11 @@
                 font-size: rem-calc(20px);
             }
             .icons {
+                @media (max-width: 510px) {
+                    flex-direction: column !important;
+                    justify-content: center;
+                    align-items: center;
+                }
                 .icon {
                     cursor: pointer;
                     width: 230px;
@@ -86,6 +101,12 @@
                         }
                     }
                 }
+                .icon--fixed {
+                    @media (max-width: 510px) {
+                        margin-right: 0 !important;
+                        margin-top: 20px;
+                    }
+                }
             }
         }
     }
@@ -94,6 +115,10 @@
 // ABOUT ME.
 .about-me {
     min-height: 800px;
+    @media (max-width: 767.98px) {
+        margin-bottom: 70px;
+        margin-top: 70px;
+    }
     .fixed-width {
         max-width: 750px;
     }
@@ -194,6 +219,203 @@
     }
 }
 
+// PRICING.
+.pricing {
+    min-height: 965px;
+    background-color: $grayBg;
+    .container {
+        min-height: 965px;
+        h1 {
+            font-family: $headingFont;
+            font-size: rem-calc(36px);
+        }
+        .card-deck {
+            height: 507px;
+        }
+        .card {
+            max-width: 360px;
+            max-height: 507px;
+            border-radius: 10px;
+            border: 2px solid $blueBg;
+            background-color: transparent;
+            box-shadow: 0 0 13px #ccc inset;
+        }
+        .card-body {
+            img {
+                max-width: 20px;
+            }
+            h2 {
+                font-size: rem-calc(24px);
+                font-family: $headingFont;
+            }
+            h1 {
+                font-size: rem-calc(36px);
+                color: $blueFont;
+            }
+            .btn {
+                width: 200px;
+                height: 54px;
+                border-radius: 25px;
+                border: 2px solid $blueBg;
+                font-weight: bold;
+                &:hover {
+                    background-color: $blueBg;
+                }
+            }
+        }
+        .card--fixed {
+            height: 557px;
+            max-height: 557px;
+            margin: -25px 10px 0 10px;
+            box-shadow: 0 0 0;
+            border: 0px solid $blueBg;
+            background-image: linear-gradient(to right, #1c64db, #3675e3, #4b85eb, #5f96f2, #73a6f8);
+            h1 {
+                color: #fff;
+            }
+            h2 {
+                color: #fff;
+            }
+            p {
+                color: #fff;
+            }
+            .btn {
+                background-color: #fff;
+                border: 2px solid #fff;
+                &:hover {
+                    background-color: #fff;
+                    color: $blueBg;
+                }
+            }
+        }
+    }
+    &__paragraph {
+        max-width: 923px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 110px;
+    }
+}
+
+// CAROUSEL.
+.carousel {
+    min-height: 550px;
+    .container {
+        min-height: 120px;
+        p {
+            margin-bottom: 80px;
+        }
+    }
+    .owl-nav {
+        text-align: center;
+    }
+    .owl-prev {
+        margin-top: 30px;
+        width: 50px;
+        height: 50px;
+        background-color: $blueBg !important;
+        color: #fff !important;
+        border-radius: 50%;
+        margin-right: 40px;
+        outline: none;
+        span {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            line-height: 15px;
+            font-size: 3rem;
+            margin-top: -4px;
+            color: #fff !important;
+        }
+    }
+    .owl-next {
+        width: 50px;
+        height: 50px;
+        background-color: $blueBg !important;
+        color: #fff !important;
+        border-radius: 50%;
+        outline: none;
+        span {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            line-height: 15px;
+            font-size: 3rem;
+            margin-top: -4px;
+            color: #fff !important;
+        }
+    }
+}
+
+// CONTACT.
+.contact {
+    min-height: 715px;
+    background-color: $grayBg;
+    @media (max-width: 767.98px) {
+        padding: 40px 0 110px 0;
+    }
+    .container {
+        min-height: 715px;
+        .row {
+            @media (max-width: 575.98px) {
+                padding: 0 20px;
+            }
+        }
+        .col-md-10 {
+            @media (max-width: 767.98px) {
+                text-align: center !important;
+            }
+        }
+        h1 {
+            font-family: $fixedFont;
+            font-weight: 600;
+            font-size: rem-calc(38px);
+        }
+        .line {
+            height: 3px;
+            background-color: $blueBg;
+            width: 70px;
+        }
+        .left-col {
+            min-height: 315px;
+            background-color: #fff;
+            @media (max-width: 767.98px) {
+                padding-top: 20px;
+            }
+        }
+        .right-col {
+            min-height: 315px;
+            @media (max-width: 767.98px) {
+                margin-top: 30px;
+                padding-left: 0;
+                padding-right: 0;
+            }
+        }
+        .form-control {
+            border: 0;
+        }
+        .textarea {
+            resize: none;
+        }
+        .btn-fixed {
+            position: absolute;
+            left: 15px;
+            bottom: -60px;
+            @media (max-width: 767.98px) {
+                left: 0;
+            }
+        }
+    }
+    &__paragraph {
+        max-width: 540px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    &__img {
+        max-width: 20px;
+    }
+}
+
 // MAP.
 .map {
     margin-bottom: -8px;
@@ -206,6 +428,9 @@
 .footer {
     min-height: 270px;
     background-color: $darkBlueBg;
+    @media (max-width: 520px) {
+        padding: 30px 0;
+    }
     .container {
         min-height: 270px;
         img {
@@ -216,6 +441,24 @@
             fill: white;
             width: 35px;
             height: 35px;
+            cursor: pointer;
+        }
+        .col-lg-6 {
+            @media (max-width: 991.98px) {
+                display: flex;
+                justify-content: center;
+                margin: 10px 0;
+            }
+            @media (max-width: 520px) {
+                text-align: center;
+            }
+        }
+        .fixed-column {
+            @media (max-width: 520px) {
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+            }
         }
     }
 }
