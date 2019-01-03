@@ -8,6 +8,10 @@
     color: $grayFont;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 // HEADER.
 .header {
     width: 100%;
@@ -17,6 +21,10 @@
     background-position: 70% 100%;
     background-size: cover; // NAVBAR.
     .navbar {
+        .navbar-toggler {
+            border: none;
+            outline: none;
+        }
         min-height: 100px;
         padding-top: 50px;
         &-brand {

@@ -19,16 +19,16 @@ module.exports = merge(common, {
 			cssProcessorOptions: { discardComments: { removeAll: true } },
 			canPrint: true,
 		}),
-		new ImageminWebpWebpackPlugin({
-			config: [
-				{
-					test: /\.(jpe?g|png)$/,
-					options: {
-						quality: 75
-					}
-				}
-			],
-			detailedLogs: false
-		})
+		// new ImageminWebpWebpackPlugin({
+		// 	config: [
+		// 		{
+		// 			test: /\.(jpe?g|png)$/,
+		// 			options: {
+		// 				quality: 75
+		// 			}
+		// 		}
+		// 	],
+		// 	detailedLogs: false
+		// })
 	],
 });
