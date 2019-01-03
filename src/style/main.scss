@@ -14,12 +14,15 @@ html {
 
 // HEADER.
 .header {
-    width: 100%;
+    // width: 100%;
     min-height: 1060px;
     background-image: url(static/shape.png);
     background-repeat: no-repeat;
     background-position: 70% 100%;
-    background-size: cover; // NAVBAR.
+    background-size: cover;
+    @media (max-width: 767.98px) {
+        padding-bottom: 80px;
+    } // NAVBAR.
     .navbar {
         .navbar-toggler {
             border: none;
@@ -70,7 +73,7 @@ html {
         &__right {
             @media (max-width: 767.98px) {
                 text-align: center !important;
-                padding: 0 20px;
+                padding: 70px 20px;
             }
             h1 {
                 font-family: $headingFont;
